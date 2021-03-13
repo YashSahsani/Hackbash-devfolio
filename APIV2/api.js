@@ -111,7 +111,7 @@ app.post('/api/CreateAsset', verifyToken, (req, res) => {
     
 });
 
-app.get('/api/GetRepoInfo',(req,res) =>{
+app.get('/api/GetItemInfo',(req,res) =>{
 let ItemName = req.query.ItemName;
 console.log("=================");
 console.log(ItemName);

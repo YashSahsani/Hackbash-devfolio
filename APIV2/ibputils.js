@@ -64,7 +64,7 @@ return contract;
 
 
 
-utils.CreateMyAsset = async function(ItemName,dev_rating,repos_rating) {
+utils.CreateMyAsset = async function(ItemName,price) {
      
   const connectionProfileJson = (await fs.readFileSync('gatewayv2/DevfolioVOrg1GatewayConnection.json')).toString();
     const connectionProfile = JSON.parse(connectionProfileJson);
@@ -84,7 +84,7 @@ utils.CreateMyAsset = async function(ItemName,dev_rating,repos_rating) {
         const transaction = contract.createTransaction('createContract');
         res['txId']=transaction.getTransactionId();
             
-        await transaction.submit( ItemName,dev_rating,repos_rating);
+        await transaction.submit( ItemName,price);
         console.log('Transaction has been submitted');
         await network.addBlockListener(async (event) => {
           // Handle block event
