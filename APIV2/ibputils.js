@@ -148,8 +148,8 @@ utils.Buy = async function(ItemName,Component_name ,dict) {
 
 
     // Disconnect from the gateway.
-    await userGateway.disconnect();
-    return "Transaction completed";
+     userGateway.disconnect();
+    return res;
 
 } catch (error) {
     console.error(`Failed to submit transaction: ${error}`);

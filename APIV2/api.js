@@ -92,7 +92,7 @@ app.post('/api/CreateAsset', verifyToken, (req, res) => {
           res.sendStatus(403);
         }else{
     
-    console.log("\n--------------  api/AdmitAStudent --------------------------");
+    console.log("\n----------------------------------------");
     let ItemName = req.body.ItemName;
     let price = req.body.price;
     console.log("\n---------------------------------------------------");
